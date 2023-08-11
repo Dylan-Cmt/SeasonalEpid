@@ -5,8 +5,8 @@ Pages = ["tutorial.md"]
 Depth = 4
 ```
 
-`SeasonalEpid` allows the user to play with epidemics models. It is based on theMadden and
-van den Bosch (2002)'s model. Informally speaking, this model is formed by four systems:
+`SeasonalEpid` allows the user to play with epidemics models. It is based on the Madden and
+van den Bosch ([2001](https://doi.org/10.1641/0006-3568(2002)052[0065:APDATA]2.0.CO;2))'s model. Informally speaking, this model is formed by four systems:
 
 $$\begin{align}
 &\begin{aligned}
