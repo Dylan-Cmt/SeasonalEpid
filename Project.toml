@@ -1,0 +1,4 @@
+name = "SeasonalEpid"
+uuid = "5f7bbc55-f748-4073-b039-d9de59b080d7"
+authors = ["Dylan-Cmt <cormet.dylan@gmail.com>"]
+version = "0.1.0"
