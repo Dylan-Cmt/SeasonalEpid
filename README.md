@@ -15,7 +15,7 @@ And that it, now you can now use the package.
 
 ## Replicating an example
 
-![image](https://github.com/Dylan-Cmt/SeasonalEpid/tree/main/docs/src/img/elab1str.png)
+![image](docs/src/img/elab1str.png)
 
 In order to replicate this run, you can simply execute the following code.
 
