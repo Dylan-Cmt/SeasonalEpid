@@ -121,6 +121,6 @@ It will be useful to modify some functions if you want to change your model. Her
 
 `TimeParam`: Normaly there's nothing to change here. In fact, you can just enter your own time parameters when you construct the object.
 
-#### Problem parameeters
+#### Problem parameters
 
 You can modify the bioparameters here so they are in adequacy with the equations you entered above.
