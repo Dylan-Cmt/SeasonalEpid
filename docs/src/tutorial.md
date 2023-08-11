@@ -76,7 +76,7 @@ using SeasonalEpid
 sp = StateElaborate()
 param = ParamAirborneElaborate1Strain()
 tp = TimeParam()
-affiche(5, sp, param, tp=tp)
+displaysim(5, sp, param, tp=tp)
 ```
 
 ## Modifying parameters of the model
@@ -91,7 +91,7 @@ using SeasonalEpid
 sp = StateCompact()
 param = ParamSoilborneCompact1Strain(Π=0.5)
 tp = TimeParam()
-affiche(5, sp, param, tp=tp)
+displaysim(5, sp, param, tp=tp)
 ```
 
 ## Implement your own models
