@@ -12,5 +12,11 @@ Depth = 3
 > **_NOTE:_**  If you want to know more about what a struct contains, type `fieldnames(structname)`.
 
 ```@docs
-greet
+A
+```
+
+```@autodocs
+Modules = [SeasonalEpid]
+Order   = [:function]
+Pages   = ["functions.jl"]
 ```
