@@ -5,7 +5,12 @@ makedocs(
     sitename = "SeasonalEpid",
     format = Documenter.HTML(
         prettyurls = get(ENV, "CI", nothing) == "true"),
-    modules = [SeasonalEpid]
+    modules = [SeasonalEpid],
+    pages=[
+                "Home" => "index.md",
+                "Getting started" => "tutorial.md",
+                "Source code documentation" => "source.md"
+               ]
 )
 
 deploydocs(
