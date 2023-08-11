@@ -1,7 +1,7 @@
 "This is a dummy module to illustrate documentation creation"
 module SeasonalEpid
 
-export A
+export TimeParam
 
 export greet
 include("structs.jl")
