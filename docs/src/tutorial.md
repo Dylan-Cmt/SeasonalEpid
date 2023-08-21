@@ -117,7 +117,7 @@ It will be useful to modify some functions if you want to change your model. Her
 `yeartransition`: replace with your initial conditions for the coming winter season.
 
 
-### Modify parameters of your problem in `structs.jl`
+### Modify or create parameters of your problem in `structs.jl`
 
 #### Time parameters
 
@@ -125,4 +125,4 @@ It will be useful to modify some functions if you want to change your model. Her
 
 #### Problem parameters
 
-You can modify the bioparameters here so they are in adequacy with the equations you entered above.
+You can construct new types like `ParamAirborneCompact1Strain`, `ParamSoilborneElaborate1Strain`, `ParamAirborneCompact2Strains`, `ParamAirborneCompact2Strains`, or anything you want, just make sure your new type inherits from the correct type. Also make sure the arguments of your functions are the right ones.
