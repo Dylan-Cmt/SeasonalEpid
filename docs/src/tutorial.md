@@ -65,7 +65,7 @@ T & \text { Year length } \\
 
 ## Replicating an example
 
-![image](docs/src/img/elab1str.png)
+![image](img/elab1str.png)
 
 In order to replicate this run, you can simply execute the following code.
 
