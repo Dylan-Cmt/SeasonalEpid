@@ -82,10 +82,9 @@ displaysim(5, sp, param, tp=tp)
 If you want to change parameters, just fill arguments you want to modify in the adapted type.
 If you modify the number of states (like to simulate a compact model instead of an elaborate model), please make sur that you also modify types that depends on it.
 
-For example, now we want to implement a soilborne compact model with a low conversion rate from I to P ($\Pi$). Here is the result:
+For example, now we want to implement a soilborne compact model with a low conversion rate from I to P (denoted $\Pi$). Here is the result:
 
-NOTE: il faut que j'enregistre cette image en faisant savefig(plot_comp1str, "comp1str.png")
-![image](docs/src/img/comp1str.png)
+![image](img/comp1str.png)
 
 And the code to get it:
 
@@ -99,7 +98,7 @@ displaysim(5, sp, param, tp=tp)
 
 ## Implement your own models
 
-A good feature of this package is that if you want to model something else, it's not complicated. Just follow this.
+A good feature of this package is that if you want to model something else, it's not complicated. Just enter the following instructions.
 
 ### Modify functions in `function.jl`
 
