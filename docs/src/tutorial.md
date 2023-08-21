@@ -100,7 +100,7 @@ displaysim(5, sp, param, tp=tp)
 
 A good feature of this package is that if you want to model something else, it's not complicated. Just enter the following instructions.
 
-### Modify functions in `function.jl`
+### Modify functions in `functions.jl`
 
 It will be useful to modify some functions if you want to change your model. Here is the things you have to re implement.
 
