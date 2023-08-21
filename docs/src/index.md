@@ -7,7 +7,7 @@ Depth = 2
 
 # SeasonalEpid.jl
 
-An open-source framework written in Julia for epidemics modeling and simulation.
+An open-source package written in Julia for seasonal plants epidemics modeling and simulation.
 
 ## The SeasonalEpid Project
 

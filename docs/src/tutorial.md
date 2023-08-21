@@ -65,9 +65,7 @@ T & \text { Year length } \\
 
 ## Replicating an example
 
-note à moi: pour enregistrer un plot il faut faire `savefig(plot_elab1str, "mon_plot.png")` par exemple. Puis pour affichier le plot ici comme exemple: voir sur WorldDynamics.jl
-
-(Afficher ici un exemple de plot obtenu avec un modèle élaboré avec une souche airborne)
+![image](docs/src/img/elab1str.png)
 
 In order to replicate this run, you can simply execute the following code.
 
@@ -84,7 +82,12 @@ displaysim(5, sp, param, tp=tp)
 If you want to change parameters, just fill arguments you want to modify in the adapted type.
 If you modify the number of states (like to simulate a compact model instead of an elaborate model), please make sur that you also modify types that depends on it.
 
-For example, now we want to implement a soilborne compact model with a low conversion rate from I to P ($\Pi). So it gives:
+For example, now we want to implement a soilborne compact model with a low conversion rate from I to P ($\Pi$). Here is the result:
+
+NOTE: il faut que j'enregistre cette image en faisant savefig(plot_comp1str, "comp1str.png")
+![image](docs/src/img/comp1str.png)
+
+And the code to get it:
 
 ```
 using SeasonalEpid
