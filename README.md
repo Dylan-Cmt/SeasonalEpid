@@ -8,7 +8,7 @@ It is distributed under the CeCILL-C license. Please refer to the LICENSE file f
 
 ## Installation
 
-From the Julia REPL, enter in the package mode with ``` ] ``` and then enter: 
+From the Julia REPL, enter in the Pkg mode with ``` ] ``` and then enter: 
 
 ```jl
 add https://github.com/Dylan-Cmt/SeasonalEpid
