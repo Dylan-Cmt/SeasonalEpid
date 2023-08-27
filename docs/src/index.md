@@ -4,6 +4,9 @@ Pages = ["tutorial.md", "source.md"]
 Depth = 2
 ```
 
+# Authors
+
+The package has been created and developed by Dylan Cormet, Ludovic Mailleret and Frédéric Grognard.
 
 # SeasonalEpid.jl
 
