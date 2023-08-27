@@ -97,7 +97,7 @@ If need, you can also do multiple dispatch on `displaysim`. This can also be use
 ```
 function displaysim(nyears::Int64,
     sp::StateParam0,
-    param::Param;
+    param::ParamCompact1Strain;
     tp::TimeParam=TimeParam())
     # simulate
     mat = simule(nyears, sp, param)
