@@ -9,7 +9,8 @@ makedocs(
     pages=[
                 "Home" => "index.md",
                 "A SeasonalEpid tutorial" => "tutorial.md",
-                "Source code documentation" => "source.md"
+                "Source code documentation" => "source.md",
+                "Implement your own models" => "othermodels.md"
                ]
 )
 

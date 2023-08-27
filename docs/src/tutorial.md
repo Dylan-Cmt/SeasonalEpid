@@ -6,7 +6,7 @@ Depth = 4
 ```
 
 `SeasonalEpid` allows the user to play with epidemics models. It is based on the Madden and
-van den Bosch ([2001](https://doi.org/10.1641/0006-3568(2002)052[0065:APDATA]2.0.CO;2))'s model. Informally speaking, this model is formed by four systems:
+van den Bosch ([2002](https://doi.org/10.1641/0006-3568(2002)052[0065:APDATA]2.0.CO;2))'s model. Here is an elaborate model formed by four systems:
 
 $$\begin{align}
 &\begin{aligned}
@@ -95,34 +95,3 @@ param = ParamSoilborneCompact1Strain(Π=0.5)
 tp = TimeParam()
 displaysim(5, sp, param, tp=tp)
 ```
-
-## Implement your own models
-
-A good feature of this package is that if you want to model something else, it's not complicated. Just enter the following instructions.
-
-### Modify functions in `functions.jl`
-
-It will be useful to modify some functions if you want to change your model. Here is the things you have to re implement.
-
-#### Model equations
-
-- `GrowingSeason`: replace with your equations for the growing season.
-
-- `WinterSeason` : replace with your equations for the winter season.
-
-#### Computation of initial conditions
-
-`winter`: replace with your initial conditions for the coming growing season.
-
-`yeartransition`: replace with your initial conditions for the coming winter season.
-
-
-### Modify or create parameters of your problem in `structs.jl`
-
-#### Time parameters
-
-`TimeParam`: Normaly there's nothing to change here. In fact, you can just enter your own time parameters when you construct the object.
-
-#### Problem parameters
-
-You can construct new types like `ParamAirborneCompact1Strain`, `ParamSoilborneElaborate1Strain`, `ParamAirborneCompact2Strains`, `ParamAirborneCompact2Strains`, or anything you want, just make sure your new type inherits from the correct type. Also make sure the arguments of your functions are the right ones.

@@ -1,6 +1,6 @@
 # Table of contents
 ```@contents
-Pages = ["tutorial.md", "source.md"]
+Pages = ["tutorial.md", "source.md", "othermodels.md"]
 Depth = 2
 ```
 
