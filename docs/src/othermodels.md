@@ -59,6 +59,9 @@ end
 
 ### Model equations
 
+`GrowingSeason`: replace with your equations.
+
+
 ```
 function GrowingSeason(State0::SVector,
 						param::ParamCompact1Strain,
@@ -87,6 +90,27 @@ function yeartransition(res_end,
 
 	return StateCompact2(I0=Inew)
 end 
+```
+
+If need, you can also do multiple dispatch on `displaysim`. This can also be used to add customisation.
+
+```
+function displaysim(nyears::Int64,
+    sp::StateParam0,
+    param::Param;
+    tp::TimeParam=TimeParam())
+    # simulate
+    mat = simule(nyears, sp, param)
+    simuleTime = 0:tp.Δt/tp.T:nyears
+
+    # plot I(t)
+    ## Custom plot for I with the first year
+    p1 = plot(mat[1, 1] ./ 365, mat[1, :I0], label="I(t)", c=:black, linestyle=:solid)
+    ## Then plot other years
+    p1 = plot!(mat[2:end, 1] ./ 365, mat[2:end, :I0], label=false, c=:black, linestyle=:solid)
+    ## add stripes
+    p1 = plot!(simuleTime, isWinter(simuleTime, tp), fillrange=0, fillcolor=:lightgray, fillalpha=0.65, lw=0, label="winter")
+end
 ```
 
 ## Make your simulation
