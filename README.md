@@ -4,6 +4,8 @@
 
 This is a package to do seasonal plants epidemics simulations.
 
+It is distributed under the CeCILL-C license. Please refer to the LICENSE file for more details.
+
 ## Installation
 
 From the Julia REPL, install the package with 
