@@ -8,7 +8,7 @@ makedocs(
     modules = [SeasonalEpid],
     pages=[
                 "Home" => "index.md",
-                "Getting started" => "tutorial.md",
+                "A SeasonalEpid tutorial" => "tutorial.md",
                 "Source code documentation" => "source.md"
                ]
 )
