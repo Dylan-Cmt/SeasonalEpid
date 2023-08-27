@@ -11,7 +11,7 @@ It is distributed under the CeCILL-C license. Please refer to the LICENSE file f
 From the Julia REPL, enter in the package mode with ``` ] ``` and then enter: 
 
 ```jl
-]add https://github.com/Dylan-Cmt/SeasonalEpid
+add https://github.com/Dylan-Cmt/SeasonalEpid
 ```
 
 And that's it, now you can now use the package.
