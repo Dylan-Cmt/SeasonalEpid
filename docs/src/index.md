@@ -10,8 +10,8 @@ The package has been created and developed by Dylan Cormet, Ludovic Mailleret an
 
 # SeasonalEpid.jl
 
-An open-source package written in Julia for seasonal plants epidemics modeling and simulation.
+An open-source package written in Julia for seasonal plant epidemic modeling and simulations.
 
 ## The SeasonalEpid Project
 
-The SeasonalEpid Project aims to provide a modern framework to investigate epidemics models. I developped this Julia library to allow scientists to easily use and adapt different epidemics models.
+The SeasonalEpid Project aims to provide a modern framework to investigate epidemic models. I developped this Julia library to allow scientists to easily use and adapt different epidemics models.
