@@ -5,7 +5,7 @@ A good feature of this package is that if you want to model something else, it's
 Here is an example about Allee Effects and the Evolution of Polymorphism in Cyclic Parthenogens, by Magda Castel, Ludovic Mailleret, Didier Andrivon, Virginie Ravigné, and Frédéric M. Hamelin ([2014]( http://www.jstor.org/stable/10.1086/674828)). We have the following compact model:
 
 $$\begin{align*}
-\dot{I} &= \beta (N - I) I \
+\dot{I} &= \beta (N - I) I \\ 
 I[(N+1)T] &= \chi I(N * T + \tau)^2
 \end{align*}$$
 
