@@ -49,7 +49,3 @@ Modules = [SeasonalEpid]
 Order   = [:function]
 Pages   = ["functions.jl"]
 ```
-
-## Reproducing figures
-
-Maybe we can show here few examples.
