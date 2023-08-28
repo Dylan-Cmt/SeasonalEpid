@@ -16,27 +16,27 @@ Stock all time variables.
 end
 
 """
-This is the most global param. Subtypes of `Param` are also abstract type.
+This is an abstract type. Subtypes of `Param` are also abstract type.
 """
 abstract type Param end
 
 """
-This param is also a global param but it is only for elaborate 1 strain models.
+This param is also an abstract type but it is only for elaborate 1 strain models.
 """
 abstract type Elaborate1Strain <: Param end
 
 """
-This param is also a global param but it is only for elaborate 2 strain2 models.
+This param is also an abstract type but it is only for elaborate 2 strain2 models.
 """
 abstract type Elaborate2Strains <: Param end
 
 """
-This param is also a global param but it is only for compact 1 strain models.
+This param is also an abstract type but it is only for compact 1 strain models.
 """
 abstract type Compact1Strain <: Param end
 
 """
-This param is also a global param but it is only for compact 2 strains models.
+This param is also an abstract type but it is only for compact 2 strains models.
 """
 abstract type Compact2Strains <: Param end
 
@@ -99,7 +99,7 @@ This param is very specific and it is built to construct  airborne elaborate 1 s
 end
 
 """
-This is the most global Stateparam. Subtypes of `StateParam0` are also abstract type.
+This is an abstract type. Subtypes of `StateParam0` are also abstract type.
 """
 abstract type StateParam0 end
 
