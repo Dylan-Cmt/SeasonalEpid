@@ -41,7 +41,7 @@ This param is also an abstract type but it is only for compact 2 strains models.
 abstract type Compact2Strains <: Param end
 
 """
-This param is very specific and it is built to construct  soilborne compact 1 strain models.
+This param is very specific because Julia does not allow double inheritance (Elaborate/Compact and Airborne/Soilborne). It is built to construct  soilborne compact 1 strain models.
 """
 @with_kw struct ParamSoilborneCompact1Strain{T<:Float64} <: Compact1Strain
     # growing season parameters
@@ -68,7 +68,7 @@ This param is very specific and it is built to construct  soilborne compact 1 st
 end
 
 """
-This param is very specific and it is built to construct  airborne elaborate 1 strain models.
+This param is very specific because Julia does not allow double inheritance (Elaborate/Compact and Airborne/Soilborne). It is built to construct  airborne elaborate 1 strain models.
 """
 @with_kw struct ParamAirborneElaborate1Strain{T<:Float64} <: Elaborate1Strain
     # growing season parameters
