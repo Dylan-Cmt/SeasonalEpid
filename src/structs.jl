@@ -107,24 +107,24 @@ abstract type StateParam0 end
 This stateparam is very specific to compact 1 strain models and it stocks model's states at the beginning of a season.
 """
 @with_kw struct StateCompact <: StateParam0
-    S0::Float64 = 0.99
-    @assert S0 >= 0
-    I0::Float64 = 0.01
-    @assert I0 >= 0
-    @assert S0 + I0 <= 1
-    State0 = @SVector [S0, I0]
+    S::Float64 = 0.99
+    @assert S >= 0
+    I::Float64 = 0.01
+    @assert I >= 0
+    @assert S + I <= 1
+    State0 = @SVector [S, I]
 end
 
 """
 This stateparam is very specific to elaborate 1 strain models and it stocks model's states at the beginning of a season.
 """
 @with_kw struct StateElaborate <: StateParam0
-    P0::Float64 = 0.01
-    @assert P0 >= 0
-    S0::Float64 = 0.99
-    @assert S0 >= 0
-    I0::Float64 = 0.00
-    @assert I0 >= 0
-    @assert S0 + I0 <= 1
-    State0 = @SVector [P0, S0, I0]
+    P::Float64 = 0.01
+    @assert P >= 0
+    S::Float64 = 0.99
+    @assert S >= 0
+    I::Float64 = 0.00
+    @assert I >= 0
+    @assert S + I <= 1
+    State0 = @SVector [P, S, I]
 end

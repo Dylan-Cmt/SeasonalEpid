@@ -113,7 +113,7 @@ function winter(res_end,
 	# compute new CI
 	Pend, Send, Iend = res_end
 	@unpack Π = param
-	sp = StateElaborate(P0=Pend + Π*Iend, S0=0, I0=0)
+	sp = StateElaborate(P=Pend + Π*Iend, S=0, I=0)
 
 	# simulation
 	@unpack tspanw, Δt = tp
@@ -153,7 +153,7 @@ function yeartransition(res_end,
 
 	Snew = n * exp(-θ*Π*exp(-μ*(T-τ))/λ * Iend)
 	Inew = n - Snew
-	return StateCompact(S0=Snew, I0=Inew)
+	return StateCompact(S=Snew, I=Inew)
 end
 
 """
@@ -170,7 +170,7 @@ function yeartransition(res_end,
 						tp::TimeParam=TimeParam())
 	Pend, Send, Iend = res_end
 	@unpack n = param
-	return StateElaborate(P0=Pend, S0=n ,I0=0)
+	return StateElaborate(P=Pend, S=n ,I=0)
 end
 
 """
@@ -286,9 +286,9 @@ function displaysim(nyears::Int64,
 
     # plot S0
     ## Custom plot for S with the first year
-    p1 = plot(mat[1, 1] ./ 365, mat[1, :S0], label="S", c=:black, linestyle=:solid)
+    p1 = plot(mat[1, 1] ./ 365, mat[1, :S], label="S", c=:black, linestyle=:solid)
     ## Then plot other years
-    p1 = plot!(mat[2:end, 1] ./ 365, mat[2:end, :S0], label=false, c=:black, linestyle=:solid)
+    p1 = plot!(mat[2:end, 1] ./ 365, mat[2:end, :S], label=false, c=:black, linestyle=:solid)
     ## add stripes
     p1 = plot!(simuleTime, isWinter(simuleTime, tp), fillrange=0, fillcolor=:lightgray, fillalpha=0.65, lw=0, label="winter")
 
@@ -297,13 +297,13 @@ function displaysim(nyears::Int64,
     p2 = plot()
     ## Custom plot for other states with the first year
     for i in 2:size(mat)[2]
-        if mat[:, i] != mat[:, :S0]
+        if mat[:, i] != mat[:, :S]
             p2 = plot!(mat[1, 1] ./ 365, mat[1, i], label=String(fieldnames(typeof(sp))[i-1]), ylims=[0, param.n / 3], c=:black, linestyle=:solid)
         end
     end
     ## Then plot other years
     for i in 2:size(mat)[2]
-        if mat[:, i] != mat[:, :S0]
+        if mat[:, i] != mat[:, :S]
             p2 = plot!(mat[:, 1] ./ 365, mat[:, i], label=false, ylims=[0, param.n / 3], c=:black, linestyle=:solid)
         end
     end
