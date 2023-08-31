@@ -128,3 +128,35 @@ This stateparam is very specific to elaborate 1 strain models and it stocks mode
     @assert S + I <= 1
     State0 = @SVector [P, S, I]
 end
+
+"""
+This stateparam is very specific to compact 2 strains models and it stocks model's states at the beginning of a season.
+"""
+@with_kw struct StateCompact2Strains <: StateParam0
+    S::Float64 = 0.99
+    @assert S >= 0
+    I1::Float64 = 0.005
+    @assert I1 >= 0
+    I2::Float64 = 0.005
+    @assert I2 >= 0
+    @assert S + I1 + I2 <= 1
+    State0 = @SVector [S, I1, I2]
+end
+
+"""
+This stateparam is very specific to elaborate 2 strains models and it stocks model's states at the beginning of a season.
+"""
+@with_kw struct StateElaborate2Strains <: StateParam0
+    P1::Float64 = 0.01
+    @assert P1 >= 0
+    P2::Float64 = 0.01
+    @assert P2 >= 0
+    S::Float64 = 0.99
+    @assert S >= 0
+    I1::Float64 = 0.00
+    @assert I1 >= 0
+    I2::Float64 = 0.00
+    @assert I2 >= 0
+    @assert S + I1 + I2 <= 1
+    State0 = @SVector [P1, P2, S, I1, I2]
+end

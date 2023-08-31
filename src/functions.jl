@@ -3,7 +3,7 @@ using Parameters, StaticArrays, AxisArrays, Plots, DifferentialEquations, Test
 """
     GrowingSeason(State0::SVector, param::Compact1Strain, t::Real)
 
-This is the function to enter in ODEProblem from DifferentialEquations.jl. 
+This function is one of the arguments of ODEProblem from DifferentialEquations.jl. It contains the model equations during growing season.
 	
 For a compact model, it returns the ODE associated to the growing season.
 
@@ -24,7 +24,7 @@ end
 """
     GrowingSeason(State0::SVector, param::ParamAirborneElaborate1Strain, t::Real)
 
-This is the function to enter in ODEProblem from DifferentialEquations.jl. 
+This function is one of the arguments of ODEProblem from DifferentialEquations.jl. It contains the model equations during growing season.
 	
 For an elaborate model, it returns the ODE associated to the growing season.
 
@@ -47,7 +47,7 @@ end
 """
     WinterSeason(State0::SVector, param::Elaborate1Strain, t::Real)
 
-This is the function to enter in ODEProblem from DifferentialEquations.jl. 
+This function is one of the arguments of ODEProblem from DifferentialEquations.jl. It contains the model equations during winter season.
 	
 It only exists for elaborate models, and it returns the ODE associated to the winter season.
 
@@ -246,7 +246,8 @@ function simule(nyears::Int64,
 				tp::TimeParam=TimeParam())
 	
 	@test param.statelength==length(sp.State0)
-	
+	@test nyears > 0
+
 	@unpack T, Δt = tp
 	mat_res =  fill_mat(nyears, sp, param, tp=tp)
 

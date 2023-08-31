@@ -5,7 +5,7 @@ Pages = ["tutorial.md"]
 Depth = 4
 ```
 
-`SeasonalEpid` allows the user to play with epidemics models. It is based on the Madden and
+`SeasonalEpid` allows the user to play with epidemics models through modeling and simulations. It is based on the Madden and
 van den Bosch ([2002](https://doi.org/10.1641/0006-3568(2002)052[0065:APDATA]2.0.CO;2))'s model and an article by Ludovic Mailleret,Magda Castel, Josselin Montarry and Frédéric M. Hamelin ([2011](https://link.springer.com/article/10.1007/s12080-011-0126-0)). Here is an airborne elaborate model formed by four systems (but you can try with its soilborn compact version, the other model which is implemented):
 
 $$\begin{align}

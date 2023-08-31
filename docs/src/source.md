@@ -11,6 +11,8 @@ Depth = 3
 
 > **_NOTE:_**  If you want to know more about what a struct contains, type `fieldnames(structname)`.
 
+Although there are structures to describe all characteristics of the different models, not all models have been implemented. In fact, only the Soilborne Compact 1 Strain and Airborne Elaborate 1 Strain models have been implemented. However, if required, it is easy to add other models, such as those that include competition. 
+
 
 ### Time parameters
 
