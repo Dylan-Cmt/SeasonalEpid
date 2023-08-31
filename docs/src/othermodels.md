@@ -83,7 +83,7 @@ end
 function yeartransition(res_end,
 						param::ParamCompact1Strain;
 						tp::TimeParam=TimeParam())
-	Iend = res_end
+	Iend = res_end[1]
 	@unpack χ = param
 
 	Inew = χ * Iend^2
