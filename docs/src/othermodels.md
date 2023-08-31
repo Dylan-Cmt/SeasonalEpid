@@ -61,7 +61,6 @@ end
 
 `GrowingSeason`: replace with your equations.
 
-
 ```
 function GrowingSeason(State0::SVector,
 						param::ParamCompact1Strain,
