@@ -166,7 +166,7 @@ It returns a StateElaborate object.
 See also [`simule`](@ref).
 """
 function yeartransition(res_end,
-						param::ParamAirborneElaborate1Strain;
+						param::Elaborate1Strain;
 						tp::TimeParam=TimeParam())
 	Pend, Send, Iend = res_end
 	@unpack n = param
