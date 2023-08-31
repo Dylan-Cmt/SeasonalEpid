@@ -49,9 +49,9 @@ end
 
 ```
 @with_kw struct StateCompact2 <: StateParam0
-    I0::Float64 = 0.01
-    @assert I0 >= 0
-    State0 = @SVector [I0]
+    I::Float64 = 0.01
+    @assert I >= 0
+    State0 = @SVector [I]
 end
 ```
 
@@ -67,7 +67,7 @@ function GrowingSeason(State0::SVector,
 						param::ParamCompact1Strain,
 						t::Real)
 
-	I = State0
+	I = State0[1]
 	@unpack β, N = param
 	
 	dI = + β * (N-I) * I 
@@ -88,7 +88,7 @@ function yeartransition(res_end,
 
 	Inew = χ * Iend^2
 
-	return StateCompact2(I0=Inew)
+	return StateCompact2(I=Inew)
 end 
 ```
 
@@ -105,9 +105,9 @@ function displaysim(nyears::Int64,
 
     # plot I(t)
     ## Custom plot for I with the first year
-    p1 = plot(mat[1, 1] ./ 365, mat[1, :I0], label="I(t)", c=:black, linestyle=:solid)
+    p1 = plot(mat[1, 1] ./ 365, mat[1, :I], label="I(t)", c=:black, linestyle=:solid)
     ## Then plot other years
-    p1 = plot!(mat[2:end, 1] ./ 365, mat[2:end, :I0], label=false, c=:black, linestyle=:solid)
+    p1 = plot!(mat[2:end, 1] ./ 365, mat[2:end, :I], label=false, c=:black, linestyle=:solid)
     ## add stripes
     p1 = plot!(simuleTime, isWinter(simuleTime, tp), fillrange=0, fillcolor=:lightgray, fillalpha=0.65, lw=0, label="winter")
 end
